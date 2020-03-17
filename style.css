@@ -1,0 +1,16 @@
+h1{
+    font-size: 3rem;
+}
+.sidebar_right{
+    padding-top: 107px;
+}
+.brand-logo {
+    margin-left: 7px;
+}
+.product_image{
+    width: 100%;
+    height: 400px;
+    background: gray;
+
+
+}
