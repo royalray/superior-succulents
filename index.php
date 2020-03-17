@@ -28,7 +28,7 @@ require 'database_connection.php';
 $db=new Db('succulent');
 $succulents=$db->read('succulents');
 $currentSucculent = false;
-if(isset($_GET['id']){
+if(isset($_GET['id'])){
     // find succulent
     foreach($succulents as $succulent){
         if($succulent['id'] == $_GET['id']){
@@ -50,11 +50,12 @@ include "header.php";
             -->
             <div class="card" style="max-width: 80%">
                 <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" src="assets/cactus_cup.jpg">
+                    <img alt="some cactus" class="activator" src="<?= $currentSucculent['name']; ?>">
+                </div>
+                <div class="card-content">
+                    <p><?= $currentSucculent['description']; ?></p>
                 </div>
 
-                <p>Superior Succulents is the home to the most varied and abundant collection of rare and beautiful
-                    cactus found around the world.</p>
             </div>
         </div>
         <div class="col m4 s12">
@@ -66,7 +67,7 @@ include "header.php";
                 ?>
                 <div class="card">
                     <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="<?= $succulent['image_url']; ?>">;
+                        <img alt="<?= $succulent['name']; ?>-image" class="activator" src="<?= $succulent['image_url']; ?>">;
                     </div>
                     <div class="card-content">
                     <span class="card-title activator grey-text text-darken-4"><?= $succulent['name']; ?><i
