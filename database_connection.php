@@ -6,7 +6,7 @@ class Db
 
     function __construct($database_name)
     {
-        $this->connection = new mysqli('localhost', 'root', '', $database_name);
+        $this->connection = new mysqli('localhost', 'root', 'NachtSchatten', $database_name);
     }
 
     function read($table)
@@ -31,6 +31,10 @@ class Db
         }
         $SQL="insert into $table($columns) values ($values)";
         $this->connection->query($SQL);
+    }
+    function delete($table, $id)
+    {
+        $this->connection->query("DELETE FROM $table WHERE id = $id");
     }
 }
 

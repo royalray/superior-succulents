@@ -8,9 +8,21 @@
 <body>
 <div class="center-container">
     <h1>Administration</h1>
+    <div >
+        <div style="border-bottom: 1px solid" n-for="succulents as succulent" n-if="succulents.name">
+            <h3>{{succulent.name}}</h3>
+            <p>{{succulent.description}}</p>
+            <img src="{{succulent.image_url}}" alt="" style="height: 120px">
+            <form action="deleteSucculent.php" method="get">
+                <input type="hidden" name="id" value="{{succulent.id}}">
+                <button type="submit">delete</button>
+            </form>
+        </div>
+
+    </div>
 
     <h2>Add new succulent</h2>
-    <form action="newSucculent.php" method="post">
+    <form action="newSucculent.php" method="post" enctype="multipart/form-data">
         <div class="input">
             <label for="new-succulent-name">Name</label>
             <input type="text" name="name" id="new-succulent-name">
