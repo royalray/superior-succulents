@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Administration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="center-container">
+    <h1>Administration</h1>
+
+    <h2>Add new succulent</h2>
+    <form action="newSucculent.php" method="post">
+        <div class="input">
+            <label for="new-succulent-name">Name</label>
+            <input type="text" name="name" id="new-succulent-name">
+        </div>
+        <div class="input">
+            <label for="new-succulent-description">Description</label>
+            <input type="text" name="description" id="new-succulent-description">
+        </div>
+        <div class="input">
+            <label for="new-succulent-image">Image</label>
+            <input type="file" name="image" id="new-succulent-image">
+        </div>
+        <div class="input">
+            <button type="submit">Add new succulent</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
