@@ -44,13 +44,13 @@ include "header.php";
 <div class="container">
     <div class="row">
         <div class="col m8 s12">
-            <h1>Succulent Placeholder</h1>
+            <h1><?= $currentSucculent['name']; ?></h1>
             <!--
                         <div class="product_image"></div>
             -->
             <div class="card" style="max-width: 80%">
                 <div class="card-image waves-effect waves-block waves-light">
-                    <img alt="some cactus" class="activator" src="<?= $currentSucculent['name']; ?>">
+                    <img alt="some cactus" class="activator" src="<?= $currentSucculent['image_url']; ?>">
                 </div>
                 <div class="card-content">
                     <p><?= $currentSucculent['description']; ?></p>
